@@ -17,3 +17,6 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
+include:
+  - board: tornblue_left
+  - board: tornblue_right
