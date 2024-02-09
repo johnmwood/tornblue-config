@@ -35,7 +35,7 @@
 
         nav_layer {
             bindings = <
-&none    &none    &none    &none    &none       &kp REDO     &kp PASTE       &kp COPY        &kp CUT       &kp UNDO 
+&none    &none    &none    &none    &none       &none        &none           &none           &none         &none
 &kp LCMD &kp LALT &kp LCTL &kp LSFT &none       &kp TOG_CAPS &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
 &none    &none    &none    &none    &none       &kp INSERT   &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &END 
          &none    &none    &none    &none       &kp RET      &kp BSPC        &kp DEL         &none 
