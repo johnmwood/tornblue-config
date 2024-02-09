@@ -11,7 +11,10 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define DEFAULT 0
-#define NAVI    1
+#define NAV     1
+#define NUM     2
+#define MEDIA   3
+#define SYM     4
 
 / {
     keymap {
@@ -20,28 +23,53 @@
 		// for testing only, modify
         default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | ESC  |
-//              | SPC | GUI | LWR | SPC |   | RGB | EFF | ALT | ENT |
+//   Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P
+//   A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  '
+//   Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  
+//      | ALT | CMD | SPC | TAB |   | RET | BSPC| DEL | ESP |
+
             bindings = <
-&kp TAB   &kp Q &kp W     &kp E    &kp R    &kp T       &kp Y           &kp U           &kp I     &kp O   &kp P    &kp BSPC
-&kp LCTRL &kp A &kp S     &kp D    &kp F    &kp G       &kp H           &kp J           &kp K     &kp L   &kp SEMI &kp SQT
-&kp LSHFT &kp Z &kp X     &kp C    &kp V    &kp B       &kp N           &kp M           &kp COMMA &kp DOT &kp FSLH &kp ESC
-                &kp SPACE &kp LGUI &mo NAVI &kp SPACE   &rgb_ug RGB_TOG &rgb_ug RGB_EFF &kp RALT  &kp RET
+&kp Q &kp W    &kp E    &kp R         &kp T     &kp Y       &kp U        &kp I     &kp O   &kp P
+&kp A &kp S    &kp D    &kp F         &kp G     &kp H       &kp J        &kp K     &kp L   &kp APOS
+&kp Z &kp X    &kp C    &kp V         &kp B     &kp N       &kp M        &kp COMMA &kp DOT &kp FSLH
+      &kp LALT &kp LCMD &lt NAV SPACE &kp TAB   &lt SYM RET &lt NUM BS   &kp DEL   &kp ESP
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN>;
         };
 
-        navi_layer {
+        nav_layer {
             bindings = <
-&none &none &none &none &none &none &none &none &none &none &none &none 
-&none &none &none &none &none &none &none &none &none &none &none &none 
-&none &none &none &none &none &none &none &none &none &none &none &none 
-            &none &none &none &none &none &none &none &none 
+&none    &none    &none    &none    &none       &kp REDO     &kp PASTE       &kp COPY        &kp CUT       &kp UNDO 
+&kp LCMD &kp LALT &kp LCTL &kp LSFT &none       &kp TOG_CAPS &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW
+&none    &none    &none    &none    &none       &kp INSERT   &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &END 
+         &none    &none    &none    &none       &kp RET      &kp BSPC        &kp DEL         &none 
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN>;
+        };
+
+        num_layer {
+            bindings = <
+&kp LBKT  &kp N7    &kp N8     &kp N9 &kp RBKT       &none  &none    &none    &none    &none       
+&kp SEMI  &kp N4    &kp N5     &kp N6 &kp EQUAL      &none  &kp RSFT &kp RCTL &kp RALT &kp RCMD
+&kp GRAVE &kp N1    &kp N2     &kp N3 &kp FSL        &none  &none    &none    &none    &none
+          &kp COMMA &kp KP_DOT &kp N0 &kp MINUS      &none  &none    &none    &none
+            >;
+        };
+
+        media_layer {
+            bindings = <
+&none    &none    &none    &none    &none    &none       &none      &none        &none      &none       
+&kp LCMD &kp LALT &kp LCTL &kp LSFT &none    &none       &kp PREV   &kp VOL_DOWN &kp VOL_UP &kp NEXT
+&none    &none    &none    &none    &none    &bt BT_CLR  &bt BT_PRV &bt BT_NXT   &bp BT_SEL &bt BT_DISC
+         &none    &none    &none    &none    &none       &kp PLAY   &kp MUTE     &none 
+            >;
+        };
+
+        sym_layer {
+            bindings = <
+&kp LBRC  &kp AMPS &kp STAR    &kp KP_LPAR &kp RBRC       &none  &none    &none    &none    &none       
+&kp COLON &kp DLLR &kp PRCNT   &kp CARET   &kp KP_PLUS    &none  &kp RSFT &kp RCTL &kp RALT &kp RCMD
+&kp TILDE &kp EXCL &kp AT_SIGN &kp HASH    &kp PIPE       &none  &none    &none    &none    &none
+          &none    &kp KP_RPAR  &kp KP_LPAR &kp UNDER     &none  &none    &none    &none
+            >;
         };
     };
-
 };
