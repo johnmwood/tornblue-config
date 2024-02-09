@@ -16,10 +16,6 @@
 #define MEDIA   3
 #define SYMS    4
 
-&lt {
-    tapping-term = <200>;
-};
-
 / {
     keymap {
         compatible = "zmk,keymap";
