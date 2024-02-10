@@ -8,7 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/rgb.h>
 
 #define DEFAULT 0
 #define NAV     1
@@ -50,9 +49,9 @@
         media_layer {
             bindings = <
 &none    &none    &none    &none    &none    &none      &none      &none        &none        &none       
-&kp LCMD &kp LALT &kp LCTL &kp LSFT &none    &none      &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
-&none    &none    &none    &none    &none    &bt BT_CLR &bt BT_PRV &bt BT_NXT   &bt BT_SEL   &bt BT_DISC
-         &none    &none    &none    &none    &none      &kp C_PLAY &kp C_MUTE   &kp C_STOP 
+&kp LCMD &kp LALT &kp LCTL &kp LSFT &none    &none      &kp C_PREV   &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
+&none    &none    &none    &none    &none    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_DISC
+         &none    &none    &none    &none    &none      &kp C_PLAY   &kp C_MUTE   &kp C_STOP 
             >;
         };
 
