@@ -27,6 +27,7 @@
 &kp Z &kp X    &kp C    &kp V         &kp B     &kp N        &kp M         &kp COMMA &kp DOT &kp FSLH
       &kp LALT &kp LCMD &lt NAV SPACE &kp TAB   &lt SYMS RET &lt NUMS BSPC &kp DEL   &kp ESC
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN>;
         };
 
         nav_layer {
@@ -36,6 +37,7 @@
 &none    &none    &none    &none    &none       &kp INSERT  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END 
          &none    &none    &none    &none       &kp RET     &kp BSPC        &kp DEL         &none 
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN>;
         };
 
         num_layer {
@@ -45,6 +47,7 @@
 &kp GRAVE &kp N1    &kp N2     &kp N3 &kp FSLH       &none  &none    &none    &none    &none
           &kp COMMA &kp KP_DOT &kp N0 &kp MINUS      &none  &none    &none    &none
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN>;
         };
 
         media_layer {
@@ -54,6 +57,7 @@
 &none    &none    &none    &none    &none    &bt BT_CLR &bt BT_PRV &bt BT_NXT   &bt BT_SEL   &bt BT_DISC
          &none    &none    &none    &none    &none      &kp C_PLAY &kp C_MUTE   &kp C_STOP 
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN>;
         };
 
         sym_layer {
@@ -63,6 +67,7 @@
 &kp TILDE &kp EXCL &kp AT_SIGN &kp HASH    &kp PIPE       &none  &none    &none    &none    &none
           &none    &kp KP_RPAR  &kp KP_LPAR &kp UNDER     &none  &none    &none    &none
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp UP DOWN>;
         };
     };
 };
