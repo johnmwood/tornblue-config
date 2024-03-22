@@ -73,7 +73,7 @@
 &none &kp LBRC  &kp AMPS &kp STAR    &kp LEFT_PARENTHESIS  &kp RBRC      &none  &none    &none    &none    &none    &none
 &none &kp COLON &kp DLLR &kp PRCNT   &kp CARET             &kp KP_PLUS   &none  &kp RSFT &kp RCTL &kp RALT &kp RCMD &none
 &none &kp TILDE &kp EXCL &kp AT_SIGN &kp HASH              &kp PIPE      &none  &none    &none    &none    &none    &none
-                &none    &kp LPAR    &kp RIGHT_PARENTHESIS &kp UNDER     &none  &none    &none    &none
+                &none    &kp BSLH    &kp RIGHT_PARENTHESIS &kp UNDER     &none  &none    &none    &none
             >;
         };
     };
